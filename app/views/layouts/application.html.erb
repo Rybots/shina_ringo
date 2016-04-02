@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>椎名林檎&#63743;</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">&#63743;</div>
+      <%= link_to "椎名林檎カウンター", japanese_path,class: "navbar-brand" %>
+    </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "日本語", japanese_path %><span class="sr-only">(current)</span></a></li>
+      <li class="active"><%= link_to "英語", english_path %><span class="sr-only">(current)</span></a></li>
+    </ul>
+
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+          <%= search_form_for @q,url: @path do |f| %>
+              <div class="form-group">
+                <%= f.search_field :"#{@t}", class: 'form-control', placeholder: '単語'%>
+              </div>
+              <%= f.submit  "検索",class: 'btn btn-default' %>
+          <% end %>
+     </div>
+    </form>
+  </div>
+ </div>
+</nav>
+
+  <div class="container" style="padding-top:70px;">
+    <%= yield %>
+  </div>
+
+  <footer class="footer" style="margin-top: 0px; margin-bottom: 10px; padding-top: 6px; border-top: 1px solid #eaeaea; color: #777; text-align:center; font-family:HGP創英角ポップ体;">
+  <small>
+  The 椎名林檎カウンター
+  by <a href="https://twitter.com/puiudon" style="text-decoration:none;FONT-SIZE:12px;COLOR: #0000ff;">ぷい氏</a>
+  </small>
+  </footer>
+</body>
+</html>

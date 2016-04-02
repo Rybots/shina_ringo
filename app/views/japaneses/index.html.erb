@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>順位</th> 
+      <th>単語</th>
+      <th>回数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @japaneses.each do |japanese| %>
+      <tr>
+        <td><%= japanese.id %></td>
+        <td><%= japanese.tango %></td>
+        <td><%= japanese.times %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
